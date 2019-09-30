@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+ <html lang="fr">
+<head>
+	<title>Résultats aux compétitions - US Créteil Triathlon</title>
+	<link rel='stylesheet' type='text/css' href='usctri.css' />
+    <meta name="Author" content="Tristan Beau">
+    <meta name="copyright" content="&copy; 2011 Tristan Beau.">
+    <META name="keywords" content="Presentation des resultats club US Creteil Triathlon">
+    <meta name="date" content="2017-11-25">
+	<meta charset="utf-8"/>
+ </head>
+ <body>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="./usctri_v3.js"></script>
+	<noscript> Les scripts ne sont pas activés. Cette page ne fonctionnera pas.</noscript>	
+	
+	<div id=titre><h1>Résultats aux compétitions - US Créteil Triathlon</h1></div>
+	<div id=contenu>
+		<h2>US Créteil Triathlon</h2>
+		<span id=retour style=visibility:hidden>
+			<a href="#" onclick="go('');" title="Cliquer pour toutes les compétitions du club">
+				<img src="back25.png" align="middle"/>
+				Retour à toutes les compétitions du club
+			</a>
+		</span>
+		<span id=chap style=visibility:visible>
+			Cliquer sur le nom d'un.e athlète pour accéder à toutes ses compétitions
+		</span>
+		<ul id=compet>
+		</ul>
+	</div>
+
+<script> 
+$(document).ready(function() { go(''); } ) ;
+</script>
+ 
+</body>
+</html>

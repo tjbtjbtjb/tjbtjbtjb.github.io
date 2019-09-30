@@ -1,0 +1,185 @@
+body {
+  font-family: ubuntu, futura, sans-serif;
+  background-color: #c0e3f4;
+  color: black;
+  border: 1px;
+}
+h1 {
+  color: #303d89;
+}
+div#titre {
+  display: none;
+}
+div#contenu {
+  width: 640px;
+}
+span#retour {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 12px;
+  text-align: left;
+}
+span#chap { 
+	font-weight: normal;
+	font-style: italic;
+	font-size: 12px;
+	text-align: right;
+}
+.ouvert {
+/*  background-color: #99cfe0;*/
+}
+.ferme {
+  display: none;
+}
+li {
+  font-size: 12px;
+  font-weight: normal;
+  list-style: none;
+  background-image: url('ferme.gif');
+  background-repeat: no-repeat;
+  line-height: 25px;
+  padding-left: 20px;
+  margin: 2px 2px 2px 18px;
+  cursor: pointer;
+}
+li.oui {
+  font-weight: bold;
+  font-size: 16px;  
+  background-color: #ffee00;
+  list-style: none;
+  background-image: url('ouvert.gif');
+}
+li.quand {
+  list-style: none;
+  background-image: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #303d89;
+  text-align: center;
+  padding-left: -10px;
+}
+li.soustitre {
+  list-style: none;
+  background-image: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #303d89;
+  text-align: left;
+  padding-left: -10px;
+}
+span.info {
+  font-weight: normal;
+  font-size: 12px;
+}
+table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 5px;
+  padding: 5px;
+}
+th, td {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+th {
+  font-weight: bold;
+  background-color: #c0e3f4;
+  font-size: 12px;
+}
+tr.chapeau {
+  border: 0px;
+  background-color: #ffee00;
+}
+tr {
+  background-color: #eeeeee;
+}
+
+img.photo {
+  width: 220px;
+}
+img.medaille {
+  height: 12pt;
+  vertical-align: middle;
+}
+a {
+  color: black;
+}
+strong {
+  font-weight: bold;
+  color: #303d89;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+td.t_img {
+  border: 0px;
+  background-color: #ffee00;
+}
+td.t_date {
+  border: 0px;
+  font-weight: bold;
+  background-color: #ffee00;
+  background-color: #ffee00;
+  margin: 0px;
+  text-align: left;
+}
+td.t_url {
+  border: 0px;
+  font-weight: bold;
+  font-size: 10px;
+  background-color: #ffee00;
+  padding: 1px;
+  text-align: left;
+  padding: -10px;
+  height: 10px;
+}
+td.t_nomcomplet {
+  width: 46%;
+  text-align: left;
+  padding-left: 5px;
+}
+td.t_nom1 {
+  width: 11%;
+  text-align: left;
+  padding-left: 5px;
+}
+td.t_nom2 {
+  width: 35%; /* redondant ? */
+  text-align: left;
+}
+td.t_cat {
+  width: 7%;
+}
+td.t_tps {
+  width: 17%;
+}
+td.t_scratch {
+  width: 15%;
+}
+td.medaille {
+  //background-color: #EFD807;
+  font-weight: bold;
+  border: 2px solid black;
+}
+td.or {
+  background-color: #EFD807;
+  font-weight: bold;
+  border: 2px solid black;
+}
+td.argent {
+  background-color: #CECECE;
+  font-weight: bold;
+  border: 2px solid black;
+}
+td.bronze {
+  background-color: #614E1A;
+  font-weight: bold;
+  color: #FFFFFF;
+  border: 2px solid black;
+}
+td.t_parcat {
+  width: 15%;
+}
