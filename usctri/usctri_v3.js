@@ -296,7 +296,7 @@ var my_join = function (data) {
 var gCut = '' ;
 
 function get_athletes() { 
-	query('select A,B,C,F,K','Athlete','list_athletes');
+	query('select A,B,C,F,J','Athlete','list_athletes');
 }
 
 function list_solo_athlete() {
