@@ -18,13 +18,20 @@
 	<div id=contenu>
 		<h2>US Créteil Triathlon</h2>
 		<span id=retour style=visibility:hidden>
-			<a href="#" onclick="go('');" title="Cliquer pour toutes les compétitions du club">
+			<a href="#" onclick="gCutInit();" title="Cliquer pour toutes les compétitions du club">
 				<img src="back25.png" align="middle"/>
-				Retour à toutes les compétitions du club
+				Retour aux compétitions de l'ensemble du club
 			</a>
+			<br/>
+		</span>
+		<span id=gcut style=visibility:visible>
+			<a href="#" onclick="gCutOut();";" title "Toutes les compétitions du club ?">
+				Vous préférez voir toutes les compétitions et non seulement celles des derniers mois ?
+			</a>
+			<br/>
 		</span>
 		<span id=chap style=visibility:visible>
-			Cliquer sur le nom d'un.e athlète pour accéder à toutes ses compétitions
+			Nota : Vous pouvez cliquer sur le nom d'un.e athlète pour accéder à toutes ses compétitions.
 		</span>
 		<ul id=compet>
 		</ul>

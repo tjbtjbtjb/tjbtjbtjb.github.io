@@ -19,11 +19,17 @@ span#retour {
   font-size: 12px;
   text-align: left;
 }
+span#gcut { 
+  font-weight: normal;
+  font-style: italic;
+  font-size: 12px;
+  text-align: left;
+}
 span#chap { 
 	font-weight: normal;
 	font-style: italic;
 	font-size: 12px;
-	text-align: right;
+	text-align: left;
 }
 .ouvert {
 /*  background-color: #99cfe0;*/

@@ -1,4 +1,10 @@
 
+var today = new Date();
+var gCut0 = ' B>=date \''+(today.getFullYear()-1)+'-'+(today.getMonth()+1)+'-01\' ' ;
+var gCut = gCut0;
+
+//console.log(gCut)
+
 var gID = '';
 var qui = [];
 var quoi = [];
@@ -293,8 +299,6 @@ var my_join = function (data) {
 	}
 }
 
-var gCut = '' ;
-
 function get_athletes() { 
 	query('select A,B,C,F,J','Athlete','list_athletes');
 }
@@ -332,7 +336,7 @@ function mono_athlete(data) {
 	if ( d.length != 1 ) alert ("Problème pour retrouver les informations de cet athlète.");
 	else {
 			q=d[0];
-			$("#contenu").children().filter($("h2")).text("Compétitions de "+q["Prénom"]+" "+q["Nom"]);
+			$("#contenu").children().filter($("h2")).text("Toutes les compétitions de "+q["Prénom"]+" "+q["Nom"]);
 	}
 	joinquery('select A where B=\''+gID+'\'','Res',
 		       'select A where C=\''+gID+'\' or D=\''+gID+'\'or E=\''+gID+'\'or F=\''+gID+'\'or G=\''+gID+'\'or H=\''+gID+'\'or I=\''+gID+'\'','Équipes',
@@ -345,25 +349,47 @@ var remplitCompet = function() {
 		query('select A,year(B),month(B),day(B),C,D,I,K,L where J=\'Oui\' and ('+gCut+') order by B desc, F desc, G desc', 'Compet','list_compet');	
 	}
 	else {
-		query('select A,year(B),month(B),day(B),C,D,I,K,L where B>=date \'2017-01-01\' and J=\'Oui\' order by B desc, F desc, G desc', 'Compet','list_compet');
+		query('select A,year(B),month(B),day(B),C,D,I,K,L where J=\'Oui\' order by B desc, F desc, G desc', 'Compet','list_compet');
 	}
 }
 
 var go = function ( id ) {
   gID = id;
-  gCut = '';
+  //console.log("Coupure = "+gCut+".");
+
   $("#compet").empty();
   l=$("<li>").text("Recherche des compétitions...");
   $("#compet").append(l);
   if ( ! id ) {
-    $("#contenu").children().filter($("h2")).text("Compétitions des derniers mois");
+    
     $("#chap").attr('style','visibility:visible');
     $("#retour").attr('style','visibility:hidden');
+
+	if ( gCut == '') {
+		$("#gcut").attr('style','visibility:hidden');
+		$("#contenu").children().filter($("h2")).text("Toutes les compétitions recensées pour le club");
+	}
+	else  {
+		$("#gcut").attr('style','visibility:visible');
+		$("#contenu").children().filter($("h2")).text("Compétitions des 12 derniers mois");
+	}
+
     get_athletes();
   }
   else {
+  	$("#gcut").attr('style','visibility:hidden');
 	$("#retour").attr('style','visibility:visible');
 	$("#chap").attr('style','visibility:hidden');
 	query('select A,B,C where A=\''+id+'\'','Athlete','mono_athlete');
   }
+}
+
+var gCutInit = function() { 
+	gCut = gCut0;
+	go('');
+}
+
+var gCutOut = function () {
+	gCut = '';
+	go('');
 }
