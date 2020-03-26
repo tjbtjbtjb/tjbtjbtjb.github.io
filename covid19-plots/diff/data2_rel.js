@@ -3,7 +3,7 @@ $(document).ready(function() {
  // AJAX in the data file
     $.ajax({
         type: "GET",
-        url: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv",
+        url: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv",
         dataType: "text",
         success: function(data) {processData(data);}
         });
@@ -25,14 +25,14 @@ $(document).ready(function() {
         for (var j=1; j<lines.length; j++) {
         var values = lines[j].split(','); // Split up the comma seperated values
 
-        	if(values[0]=='France' && values[1]=='France') {
+        	if(values[0]=='' && values[1]=='France') {
         	
         		for(t=24;t<values.length;t++) {
         			time.push(headings[t]);
         			data1.push((values[t]-values[t-1]))
         		}
         	}
-        	if(values[0]=='United Kingdom' && values[1]=='United Kingdom') {
+        	if(values[0]=='' && values[1]=='United Kingdom') {
         	
         		for(t=24;t<values.length;t++) {
         			//time.push(headings[t]);
