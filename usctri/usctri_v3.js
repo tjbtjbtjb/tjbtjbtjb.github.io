@@ -238,7 +238,7 @@ var list_compet = function(data) {
     t.append("<tr><td colspan=6 class=t_date>"+ddf+" à "+item["Lieu"]+"</td></tr>"
         +img
         +"<tr class=chapeau><td colspan=6 class=t_url>Visiter : <a href=\""+item["Url"]+"\" target=\"_blank\">le site web de l'épreuve</a>"
-        +((!!item["UrlResultats"])?" ou <a href=\""+item["UrlResultats"]+"\" target=\"_blank\">les résultats</a>":"")
+        +((!!item["UrlResultats"])?" ou <a href=\""+item["UrlResultats"]+"\" target=\"_blank\">les résultats</a>":item["UrlResultats"])
 	    +".</td></tr>"
         +"<tr class=chapeau><th colspan=2 class=t_nomcomplet >Nom de l'athlète</th>"
         +"<th class=t_cat>Cat</th>"
