@@ -1,0 +1,11 @@
+# Local agent notes, not part of the published site
+CLAUDE.md
+
+# OS and editor cruft
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.bak
+.idea/
+.vscode/
